@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.TimeSeries" Version="1.7.0" />
+  </ItemGroup>
+  <ItemGroup Label="ForecastingFile">
+    <None Include="ForecastingFile.consumption.cs">
+      <DependentUpon>ForecastingFile.mbconfig</DependentUpon>
+    </None>
+    <None Include="ForecastingFile.training.cs">
+      <DependentUpon>ForecastingFile.mbconfig</DependentUpon>
+    </None>
+    <None Include="ForecastingFile.zip">
+      <DependentUpon>ForecastingFile.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
